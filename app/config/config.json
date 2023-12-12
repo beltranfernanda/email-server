@@ -1,0 +1,30 @@
+{
+  "ENVIRONMENT": {
+    "environment_variable": "FLASK_ENVIRONMENT",
+    "default": "DEVELOP"
+  },
+  "EMAIL_USERNAME": {
+    "environment_variable": "FLASK_EMAIL_USERNAME",
+    "default": "test"
+  },
+  "EMAIL_PASSWORD": {
+    "environment_variable": "FLASK_EMAIL_PASSWORD",
+    "default": "test-password"
+  },
+  "SENDER_EMAIL": {
+    "environment_variable": "FLASK_SENDER_EMAIL",
+    "default": "test@test.com"
+  },
+  "RECIPIENT_EMAIL": {
+    "environment_variable": "FLASK_RECIPIENT_EMAIL",
+    "default": "test@test.com"
+  },
+  "SMTP_SERVER": {
+    "environment_variable": "FLASK_SMTP_SERVER",
+    "default": "smtp.gmail.com"
+  },
+  "SMTP_PORT": {
+    "environment_variable": "FLASK_SMTP_PORT",
+    "default": 587
+  }
+}

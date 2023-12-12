@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Contact Form</title>
+    <style>
+        h2 {{
+            color: #555555;
+        }}
+
+        .container {{
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+        }}
+
+        p.label {{
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            color: #562488;
+            font-size: 16px;
+        }}
+
+        p.text {{
+            font-family: Arial, sans-serif;
+            color: #1f1f1f;
+        }}
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>{name_sender} has contacted you!</h2>
+    <p class="text">They let you the following information:</p>
+    <p class="label">Phone number:</p>
+    <p class="text">{phone_number}</p>
+    <p class="label">Email:</p>
+    <p class="text">{email_sender}</p>
+    <p class="label">Message:</p>
+    <p class="text">{email_message}</p>
+</div>
+</body>
+</html>
