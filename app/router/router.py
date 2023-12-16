@@ -1,7 +1,9 @@
+from flask import Flask
+
 from app.router.dependencies import load_dependencies
 
 
-def map_routes(app):
+def map_routes(app: Flask) -> None:
     instances = load_dependencies(app)
 
     ping = instances.get('ping')
