@@ -2,6 +2,7 @@ import unittest
 from unittest.mock import patch
 
 from flask import Flask
+
 from app.router.dependencies import load_dependencies
 
 

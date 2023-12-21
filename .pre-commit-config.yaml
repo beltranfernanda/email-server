@@ -5,7 +5,17 @@ repos:
     -   id: check-yaml
     -   id: end-of-file-fixer
     -   id: trailing-whitespace
+    -   id: requirements-txt-fixer
+    -   id: check-json
 -   repo: https://github.com/psf/black
     rev: 22.10.0
     hooks:
     -   id: black
+-   repo: local
+    hooks:
+    -   id: unittest
+        name: run tests
+        entry: python -m unittest
+        language: system
+        pass_filenames: false
+        args: ["discover"]

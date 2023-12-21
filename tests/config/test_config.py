@@ -1,6 +1,6 @@
 import unittest
+from unittest.mock import MagicMock, patch
 
-from unittest.mock import patch, MagicMock
 from app.config.config import Config
 
 

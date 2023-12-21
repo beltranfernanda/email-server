@@ -2,7 +2,8 @@ import http
 from http import HTTPStatus
 from typing import Union
 
-from flask import request, jsonify, Response, current_app
+from flask import Response, current_app, jsonify, request
+
 from app.exception.email_internal_error_exception import EmailInternalErrorException
 from app.model.api_request import ApiRequest
 from app.model.api_response import ApiResponse

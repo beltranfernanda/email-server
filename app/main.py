@@ -1,5 +1,7 @@
 import logging
+
 from flask import Flask
+
 from app.router.router import map_routes
 
 if __name__ == "__main__":
