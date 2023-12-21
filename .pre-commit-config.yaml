@@ -15,13 +15,12 @@ repos:
     hooks:
     -   id: unittest
         name: run tests
-        entry: python -m unittest
-        language: system
+        entry: ./.hooks/test.sh
+        language: script
         pass_filenames: false
-        args: ["discover"]
 
     -   id: coverage
         name: validate coverage
         entry: ./.hooks/coverage.sh
-        language: system
+        language: script
         pass_filenames: false
