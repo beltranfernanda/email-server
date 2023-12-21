@@ -4,7 +4,6 @@ from typing import Any
 
 
 class Config:
-
     def __init__(self, app):
         self.app = app
 

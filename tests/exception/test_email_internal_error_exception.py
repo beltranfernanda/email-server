@@ -4,7 +4,6 @@ from app.exception.email_internal_error_exception import EmailInternalErrorExcep
 
 
 class TestEmailInternalErrorException(unittest.TestCase):
-
     def test_default_message(self):
         exception = EmailInternalErrorException()
         self.assertEqual(str(exception), "An error has occurred sending message")

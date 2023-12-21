@@ -4,7 +4,6 @@ from app.exception.env_variable_not_found_exception import EnvVariableNotFoundEx
 
 
 class TestEmailInternalErrorException(unittest.TestCase):
-
     def test_default_message(self):
         exception = EnvVariableNotFoundException()
         self.assertEqual(str(exception), "Environment variable value not found")
