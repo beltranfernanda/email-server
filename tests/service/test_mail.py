@@ -1,6 +1,6 @@
 import smtplib
 import unittest
-from unittest.mock import MagicMock, Mock, mock_open, patch
+from unittest.mock import MagicMock, mock_open, patch
 
 from app.exception.email_internal_error_exception import EmailInternalErrorException
 from app.service.mail import EmailService
