@@ -26,5 +26,9 @@
   "SMTP_PORT": {
     "environment_variable": "FLASK_SMTP_PORT",
     "default": 587
+  },
+  "SECRET_KEY": {
+    "environment_variable": "FLASK_SECRET_KEY",
+    "default": "develop"
   }
 }

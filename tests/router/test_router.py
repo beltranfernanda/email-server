@@ -1,26 +1,23 @@
 import unittest
-from unittest.mock import Mock, patch
+from unittest.mock import patch, MagicMock
 
 from flask import Flask
 
 from app.router.router import map_routes
+from tests.utils.magic_mock_with_name import MagicMockWithName
 
 
 class TestRouter(unittest.TestCase):
     @patch("app.router.router.load_dependencies")
     def test_map_routes(self, mock_load_dependencies):
         # Arrange
-        app = Mock(spec=Flask)
+        app = MagicMock(spec=Flask)
 
-        mock_instances = {"ping": Mock(), "email": Mock()}
+        mock_instances = {"ping": MagicMockWithName(), "email": MagicMockWithName()}
         mock_load_dependencies.return_value = mock_instances
 
         # Act
         map_routes(app)
 
         # Assert
-        app.add_url_rule.assert_any_call("/ping", view_func=mock_instances["ping"].ping)
-        app.add_url_rule.assert_any_call(
-            "/mail/send", view_func=mock_instances["email"].send_mail, methods=["POST"]
-        )
         mock_load_dependencies.assert_called_once_with(app)

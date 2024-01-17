@@ -14,7 +14,4 @@ def load_dependencies(app: Flask) -> dict:
     email_service = EmailService(config)
     email_controller = EmailController(email_service)
 
-    return {
-        "ping": ping_controller,
-        "email": email_controller,
-    }
+    return {"ping": ping_controller, "email": email_controller, "config": config}
