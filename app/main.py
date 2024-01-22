@@ -5,11 +5,11 @@ from app.router.router import map_routes
 
 
 def create_app():
-    app = Flask(__name__)
-    logger = app.logger
+    flask_app = Flask(__name__)
+    logger = flask_app.logger
     logger.setLevel(logging.ERROR)
-    map_routes(app)
-    return app
+    map_routes(flask_app)
+    return flask_app
 
 
 if __name__ == "__main__":
