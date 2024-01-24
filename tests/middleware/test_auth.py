@@ -27,14 +27,14 @@ class TestAuthMiddleware(unittest.TestCase):
 
     def test_invalid_hmac_signature(self):
         response = self.client.get("/middleware", headers={"Authorization": "test"})
-        self.assertEqual(response.status_code, 403)
+        self.assertEqual(403, response.status_code)
 
     def test_valid_hmac_signature_and_view_func_call(self):
         response = self.client.get(
             "/middleware",
             headers={
                 "Authorization": "jLGma3E97LZn+GeTISWgfxeViLAkTBqf2vwPQbeEbqc=",
-                "Origin": "test",
+                "x-origin": "test",
             },
         )
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(200, response.status_code)

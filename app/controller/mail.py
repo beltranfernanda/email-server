@@ -28,9 +28,7 @@ class EmailController:
             self.email_service.send_message(
                 body["name"], body["email"], body.get("phone", ""), body["message"]
             )
-            response = ApiResponse(
-                200, "Everything works fine!"
-            ).get_formatted_response()
+            response = ApiResponse(200, "Successfully sent").get_formatted_response()
             return jsonify(response), http.HTTPStatus.OK
 
         except (EmailInternalErrorException, Exception) as err:
@@ -45,7 +43,7 @@ class EmailController:
     def _validate_api_request(self, body) -> (bool, str):
         required_fields = ["name", "email", "message"]
         for field in required_fields:
-            if field not in body:
+            if field not in body or not isinstance(body[field], str):
                 return False, field
 
         return True, None
